@@ -1,8 +1,8 @@
-from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
+from . import views
+#from .import HodViews, StaffViews, StudentViews
 
 urlpatterns = [
-
-
+      path('', views.loginPage, name="login"),
 
 ]
