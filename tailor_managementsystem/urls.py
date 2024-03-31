@@ -1,5 +1,5 @@
 """
-URL configuration for project project.
+URL configuration for tailor_managementsystem tailor_managementsystem.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -19,7 +19,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('customers.urls')),
-    path('', include('product.urls')),
+    #app name
+    path('', include("tailormngmntapp.urls")),
+
 
 ]
