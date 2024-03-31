@@ -4,16 +4,13 @@ from django.db import models
 class Product(models.Model):
     LIVE=1
     DELETE=0
-    DELETE_CHOICES=((LIVE,'live'),(DELETE,'delete'))
-    title=models.CharField(max_length=200)
-    product_rate=models.FloatField()
-    model_rate=models.FloatField()
-    quantity=models.FloatField()
-    Amount=models.FloatField()
-    image=models.ImageField(upload_to='/media')
+    DELETE_CHOICES = ((LIVE, 'live'),(DELETE, 'delete'))
+    customer_name = models.CharField(max_length=200)
+    address = models.FloatField()
+    place = models.FloatField()
+    person_name=models.FloatField()
+    person_designation=models.FloatField()
     status=models.CharField(max_length=100)
-    deliverd_to=models.FloatField()
-    delivered_date = models.FloatField()
     priority = models.IntegerField(default=0)
     delete_status=models.IntegerField(choices=DELETE_CHOICES,default=LIVE)
     created_at=models.DateTimeField(auto_now_add=True)
